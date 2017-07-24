@@ -9,6 +9,32 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="collapse navbar-collapse navbar-inverse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <div class="nav-content">
+          <%= link_to "Home", root_path %> |
+          <% if current_user %>
+          <%= current_user.email %> |
+          <%= link_to "Signout", destroy_user_session_path, method: 'delete' %> |
+          <%= link_to 'Edit Profile',edit_user_registration_path %>
+          <% else %>
+          <%= link_to "Signup", new_user_registration_path %> | <%= link_to "Sign in", new_user_session_path %>
+          <% end %>
+          <span class="store-name">Fitness Buddy</span>
+        </div>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <%= yield %>
+        </div>
+        <div class="col-md-6">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
