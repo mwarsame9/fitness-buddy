@@ -1,0 +1,7 @@
+<h1>Show Measurement</h1>
+
+<p><%= link_to "Edit", edit_measurement_path(@measurement) %></p>
+<p><%= link_to "Delete", measurement_path(@measurement),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+<p><%= link_to "Return to measurements", measurements_path %></p>
