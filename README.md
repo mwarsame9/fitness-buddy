@@ -1,24 +1,32 @@
-# README
+# _Fitness Buddy_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _An application for fitness enthusiasts. Users create an account and profile. At that point, they can keep tracker of essential statistics such as weight, body fat percentage, waist and bicep size. Over time, users will get a visual representation of their progress in the form of user-friendly graphs_
 
-Things you may want to cover:
+#### By _**Mohamed Warsame **_
 
-* Ruby version
+## Setup/Installation Requirements
 
-* System dependencies
+* _Clone the repo_
+* _Run the following commands in the root of the project to set up the application_
+```
+$ bundle install
+$ rails db:create
+$ rails db:schema:load
+$ rails db:seed
+$ rails s
+```
 
-* Configuration
+## Technologies Used
 
-* Database creation
+* _HTML5/SCSS_
+* _Rails_
+* _Ruby_
+* _Rspec_
+* _Capybara_
+* _Devise_
 
-* Database initialization
+### License
 
-* How to run the test suite
+*This is web page is licensed under the MIT License.*
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Copyright (c) 2017 **_Mohamed Warsame_**
