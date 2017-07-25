@@ -21,8 +21,6 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    # Use strict parameters, replace placeholder info below with your class' actual attributes
-    # params.require(:user).permit(:email, :encrypted_password)
     params.require(:user).permit(:email, :encrypted_password)
   end
 end
