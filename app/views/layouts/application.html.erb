@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
   </head>
 
   <body>
@@ -26,14 +27,12 @@
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <%= yield %>
-        </div>
-        <div class="col-md-6">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-        </div>
+      <div class="alerts">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+      <div class="page">
+        <%= yield %>
       </div>
     </div>
   </body>

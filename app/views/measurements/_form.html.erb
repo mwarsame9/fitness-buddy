@@ -1,5 +1,34 @@
-<%= render "layouts/errors", :object => @measurement %>
+<%= render "layouts/errors", :object => @product %>
 
-<%= form_for @measurement do |f| %>
+<%= form_for @product do |f| %>
+<%= f.label :chest %>
+<br>
+<%= f.text_field :chest %>
+<br>
+<%= f.label :arms %>
+<br>
+<%= f.text_field :arms %>
+<br>
+<%= f.label :waist %>
+<br>
+<%= f.text_field :waist %>
+<br>
+<%= f.label :hips %>
+<br>
+<%= f.text_field :hips %>
+<br>
+<%= f.label :thighs %>
+<br>
+<%= f.text_field :thighs %>
+<br>
+<%= f.label :calves %>
+<br>
+<%= f.text_field :calves %>
+<br>
+<%= f.label :body_fat %>
+<br>
+<%= f.text_field :body_fat %>
+<%= f.hidden_field(:user_id, :value => current_user.id) %>
+<br>
   <%= f.submit %>
 <% end %>
