@@ -1,0 +1,13 @@
+<br><br>
+<% @user.measurements.each do |measurement| %>
+  <div class="panel panel-info">
+    <div class="panel-heading"><%= measurement.created_at %></div>
+    <div class="panel-body">Chest: <%= measurement.arms %> inches</div>
+    <div class="panel-body">Arms: <%= measurement.arms %> inches</div>
+    <div class="panel-body">Waist: <%= measurement.waist %> inches</div>
+    <div class="panel-body">Hips: <%= measurement.hips %> inches</div>
+    <div class="panel-body">Thighs: <%= measurement.thighs %> inches</div>
+    <div class="panel-body">Calves: <%= measurement.calves %> inches</div>
+    <div class="panel-body">Body Fat: <%= measurement.body_fat %>%</div>
+  </div>
+<% end %>
