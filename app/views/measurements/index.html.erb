@@ -3,7 +3,7 @@
 <h4>Dashboard</h4>
 <hr>
 <ul>
-  <% @measurements.each do |measurement| %>
+  <% @user.measurements.each do |measurement| %>
     <li><%= link_to measurement.created_at, measurement_path(measurement) %></li>
   <% end %>
 </ul>
