@@ -4,5 +4,6 @@ class User < ApplicationRecord
 
   validates :email, :presence => true, :uniqueness => true
   validates :encrypted_password, :presence => true
-  has_many :measurements
+  has_many :workouts
+  has_many :exercises
 end

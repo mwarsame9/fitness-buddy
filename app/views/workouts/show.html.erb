@@ -1,7 +1,18 @@
-<h1>Show Workout</h1>
+<div id="workout">
+  <p><%= @workout.date %></p>
+  <p><%= @workout.workout %></p>
+  <p><%= @workout.mood %></p>
+  <p><%= @workout.length %></p>
+</div>
 
-<p><%= link_to "Edit", edit_workout_path(@workout) %></p>
-<p><%= link_to "Delete", workout_path(@workout),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
-<p><%= link_to "Return to workouts", workouts_path %></p>
+<div id="exercises">
+  <h2>Exercises</h2>
+  <%= render @workout.exercises %>
+
+  <h3>Add an exercise</h3>
+  <%= render 'exercises/form' %>
+</div>
+
+<%= link_to "Back", root_path %> |
+<%= link_to "Edit", edit_workout_path(@workout) %> |
+<%= link_to "Delete", workout_path(@workout), method: :delete, data: { confrim: "Are you sure?" } %>

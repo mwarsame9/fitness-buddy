@@ -1,5 +1,17 @@
 <%= render "layouts/errors", :object => @workout %>
 
-<%= form_for @workout do |f| %>
+<%= form_for(@workout, html: { class: 'form-horizontal' }) do |f| %>
+<%= f.label :date %>
+<br>
+<%= f.text_field :date %>
+<br>
+<%= f.label :workout %>
+<br>
+<%= f.text_field :workout %>
+<br>
+<%= f.label :length %>
+<br>
+<%= f.text_field :length %>
+  <br>
   <%= f.submit %>
 <% end %>

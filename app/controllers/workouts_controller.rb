@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = Workout.all
+    @workouts = Workout.all.order("created_at DESC")
   end
 
   def show
@@ -46,6 +46,6 @@ class WorkoutsController < ApplicationController
 private
   def workout_params
     # Use strict parameters, replace placeholder info below with your class' actual attributes
-    params.require(:workout).permit(:attribute1, :attribute2, :attribute3)
+    params.require(:workout).permit(:date, :workout, :length)
   end
 end

@@ -1,10 +1,11 @@
 <h1>Workouts</h1>
 
-<ul>
+<div id="index_workouts">
   <% @workouts.each do |workout| %>
-    <li><%= link_to "Show", workout_path(workout) %></li>
+    <h2><%= link_to workout.date.strftime("%A, %B %d"), workout %></h2>
+    <h3><span>Workout:</span> <%= workout.workout %></h3>
   <% end %>
-</ul>
+</div>
 
 <hr>
 
