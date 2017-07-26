@@ -2,8 +2,8 @@ class MeasurementsController < ApplicationController
   before_action :require_permission, only: :edit
 
   def index
-    @user = User.find(params[:id])
-    # @measurements = Measurement.all
+    # @user = User.find(params[:id])
+    @measurements = Measurement.all
   end
 
   def show
