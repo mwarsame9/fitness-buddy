@@ -1,0 +1,7 @@
+<h1>Show Workout</h1>
+
+<p><%= link_to "Edit", edit_workout_path(@workout) %></p>
+<p><%= link_to "Delete", workout_path(@workout),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+<p><%= link_to "Return to workouts", workouts_path %></p>
