@@ -1,4 +1,14 @@
-<h1>Show Measurement</h1>
+<br><br>
+<div class="panel panel-info">
+  <div class="panel-heading"><%= @measurement.created_at %></div>
+  <div class="panel-body">Chest: <%= @measurement.arms %> inches</div>
+  <div class="panel-body">Arms: <%= @measurement.arms %> inches</div>
+  <div class="panel-body">Waist: <%= @measurement.waist %> inches</div>
+  <div class="panel-body">Hips: <%= @measurement.hips %> inches</div>
+  <div class="panel-body">Thighs: <%= @measurement.thighs %> inches</div>
+  <div class="panel-body">Calves: <%= @measurement.calves %> inches</div>
+  <div class="panel-body">Body Fat: <%= @measurement.body_fat %>%</div>
+</div>
 
 <p><%= link_to "Edit", edit_measurement_path(@measurement) %></p>
 <p><%= link_to "Delete", measurement_path(@measurement),

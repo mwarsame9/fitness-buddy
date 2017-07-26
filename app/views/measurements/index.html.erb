@@ -1,9 +1,10 @@
 
 <% if current_user %>
-<h4>Measurements</h4>
+<h4>Dashboard</h4>
+<hr>
 <ul>
   <% @measurements.each do |measurement| %>
-    <li><%= link_to "Show", measurement_path(measurement) %></li>
+    <li><%= link_to measurement.created_at, measurement_path(measurement) %></li>
   <% end %>
 </ul>
 <hr>
