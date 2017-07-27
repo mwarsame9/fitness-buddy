@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FitnessBuddy</title>
+    <title>WorkoutBuddy</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,8 +16,7 @@
             <li><%= link_to "Home", root_path %></li>
             <% if current_user %>
               <li><%= link_to "Signout", destroy_user_session_path, method: 'delete' %></li>
-              <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
-              <li><%= current_user.email %></li>
+              <li><%= link_to current_user.email, edit_user_registration_path %></li>
               <% else %>
               <li><%= link_to "Signup", new_user_registration_path %></li>
               <li><%= link_to "Sign in", new_user_session_path %></li>
@@ -25,12 +24,8 @@
           </ul>
         </div>
       </nav>
-
+<br><br>
     <div class="container">
-      <div class="alerts">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      </div>
       <div class="page">
         <%= yield %>
       </div>
