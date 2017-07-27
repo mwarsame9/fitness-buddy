@@ -1,6 +1,6 @@
 # _Fitness Buddy_
 
-#### _An application for fitness enthusiasts. Users create an account and profile. At that point, they can keep tracker of essential statistics such as weight, body fat percentage, waist and bicep size. Over time, users will get a visual representation of their progress in the form of user-friendly graphs_
+#### _An application for fitness enthusiasts. Users create an account and profile. At that point, they can keep tracker of their workouts by logging them._
 
 #### By _**Mohamed Warsame **_
 
