@@ -1,7 +1,5 @@
-<h4><%= @workout.date.strftime("%A, %B %d") %></h4>
-
-
 <% if @workout.exercises.any? %>
+<h4>Exercises</h4>
   <div id="index_workouts">
     <table>
       <tr>
@@ -21,6 +19,7 @@
       </table>
   </div>
 <% else %>
+<h4><%= @workout.date.strftime("%A, %B %d") %></h4>
 <div id="workout">
   <table>
     <tr>
