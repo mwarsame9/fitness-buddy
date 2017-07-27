@@ -10,7 +10,7 @@
           <th>Length</th>
           <th>Notes</th>
         </tr>
-      <% @workouts.each do |workout| %>
+      <% current_user.workouts.each do |workout| %>
         <tr>
           <td><%= link_to workout.date.strftime("%A %B %d"), workout_path(workout) %></td>
           <td><%= workout.workout %></td>
