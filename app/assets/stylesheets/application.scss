@@ -29,7 +29,7 @@
 // }
 
 body {
-  color: teal;
+  color: #009688;
 }
 
 
@@ -43,7 +43,8 @@ th {
     border: 1px solid black;
     text-align: center;
     padding: 8px;
-    background-color: #f9a825;
+    color: white;
+    background-color: #009688;
 }
 td {
     border: 1px solid black;
@@ -52,5 +53,5 @@ td {
 }
 
 tr:nth-child(odd) {
-    background-color: #bdbdbd;
+    background-color: #e0f2f1;
 }
