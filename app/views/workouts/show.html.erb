@@ -1,19 +1,23 @@
+
 <div id="workout">
   <table>
     <tr>
       <th>Date</th>
       <th>Workout</th>
       <th>Length</th>
+      <th>Notes</th>
     </tr>
     <tr>
       <td><%= @workout.date.strftime("%A, %B %d") %></td>
       <td><%= @workout.workout %></td>
       <td><%= @workout.length %></td>
+      <td><%= @workout.notes %></td>
+
     </tr>
   </table>
 </div>
 
-<br>
+<br><br>
 
 <%= link_to "Back", root_path %> |
 <%= link_to "Edit", edit_workout_path(@workout) %> |
