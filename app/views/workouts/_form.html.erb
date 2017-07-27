@@ -3,9 +3,10 @@
 
 
 <%= simple_form_for @workout do |f| %>
-    <%= f.input :date, wrapper_html: { class: 'm6 s12' } %>
-    <%= f.input :workout, wrapper_html: { class: 'm6 s12' } %>
-    <%= f.input :length, wrapper_html: { class: 'm6 s12' } %>
+    <%= f.input :date, label: 'Date of the workout' %>
+    <%= f.input :workout, label: 'Type of workout' %>
+    <%= f.input :length, label: 'Length of workout' %>
+    <%= f.input :notes, label: 'Any notes' %>
     <%= f.hidden_field(:user_id, :value => current_user.id) %>
 
     <br>

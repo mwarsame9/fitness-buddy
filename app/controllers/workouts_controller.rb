@@ -45,7 +45,6 @@ class WorkoutsController < ApplicationController
 
 private
   def workout_params
-    # Use strict parameters, replace placeholder info below with your class' actual attributes
-    params.require(:workout).permit(:date, :workout, :length, :user_id)
+    params.require(:workout).permit(:date, :workout, :length, :notes, :user_id)
   end
 end
