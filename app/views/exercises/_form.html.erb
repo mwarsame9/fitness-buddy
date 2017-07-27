@@ -4,6 +4,7 @@
     <%= f.input :name, label: 'Name of exercise' %>
     <%= f.input :sets, label: 'Number of sets' %>
     <%= f.input :reps, label: 'Number of reps per set' %>
+    <%= f.input :lbs, label: 'Weight in lbs' %>
     <%= f.hidden_field(:user_id, :value => current_user.id) %>
     <%= f.hidden_field(:workout_id, :value => @workout.id) %>
 

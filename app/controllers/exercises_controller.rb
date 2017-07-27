@@ -47,7 +47,6 @@ class ExercisesController < ApplicationController
 
 private
   def exercise_params
-    # Use strict parameters, replace placeholder info below with your class' actual attributes
-    params.require(:exercise).permit(:name, :sets, :reps, :workout_id, :user_id)
+    params.require(:exercise).permit(:name, :sets, :reps, :lbs, :workout_id, :user_id)
   end
 end

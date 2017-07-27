@@ -8,12 +8,14 @@
         <th>Exercise</th>
         <th>Sets</th>
         <th>Reps</th>
+        <th>Lbs</th>
       </tr>
     <% @workout.exercises.each do |exercise| %>
       <tr>
         <td><%= exercise.name %></td>
         <td><%= exercise.sets %></td>
         <td><%= exercise.reps %></td>
+        <td><%= exercise.lbs %></td>
       </tr>
       <% end %>
       </table>
