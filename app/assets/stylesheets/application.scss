@@ -29,6 +29,31 @@
 
 }
 
-body {
-  background-image: url(dark-bg.png);
+// body {
+//   background-image: url(dark-bg.png);
+// }
+#workout {
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+    background-color: #f9a825;
+}
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #bdbdbd;
 }
