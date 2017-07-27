@@ -10,21 +10,21 @@
   </head>
 
   <body>
-    <div class="collapse navbar-collapse navbar-inverse" id="navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <div class="nav-content">
-          <%= link_to "Home", root_path %> |
-          <% if current_user %>
-          <%= current_user.email %> |
-          <%= link_to "Signout", destroy_user_session_path, method: 'delete' %> |
-          <%= link_to 'Edit Profile',edit_user_registration_path %>
-          <% else %>
-          <%= link_to "Signup", new_user_registration_path %> | <%= link_to "Sign in", new_user_session_path %>
-          <% end %>
-          <span class="app-name">Fitness Buddy</span>
+    <nav>
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><%= link_to "Home", root_path %></li>
+            <% if current_user %>
+              <li><%= link_to "Signout", destroy_user_session_path, method: 'delete' %></li>
+              <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+              <li><%= current_user.email %></li>
+              <% else %>
+              <li><%= link_to "Signup", new_user_registration_path %></li>
+              <li><%= link_to "Sign in", new_user_session_path %></li>
+              <% end %>
+          </ul>
         </div>
-      </ul>
-    </div>
+      </nav>
 
     <div class="container">
       <div class="alerts">
