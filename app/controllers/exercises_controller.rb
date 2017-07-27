@@ -8,14 +8,16 @@ class ExercisesController < ApplicationController
   end
 
   def new
+    @workout = Workout.find(params[:workout_id])
     @exercise = Exercise.new
   end
 
   def create
+    @workout = Workout.find(params[:workout_id])
     @exercise = Exercise.new(exercise_params)
     if @exercise.save
     flash[:notice] = "Exercise successfully added!"
-      redirect_to  exercises_path
+      redirect_to  workout_path(@workout)
     else
       render :new
     end
@@ -36,16 +38,16 @@ class ExercisesController < ApplicationController
   end
 
   def destroy
-    @exercise = Exercise.find(params[:id])
-    if @exercise.destroy
+    @workout = Exercise.find(params[:id]).workout
+    if Exercise.find(params[:id]).destroy
       flash[:notice] = "Exercise successfully removed!"
-      redirect_to exercises_path
+      redirect_to workout_path(@workout)
     end
   end
 
 private
   def exercise_params
     # Use strict parameters, replace placeholder info below with your class' actual attributes
-    params.require(:exercise).permit(:attribute1, :attribute2, :attribute3)
+    params.require(:exercise).permit(:name, :sets, :reps, :workout_id, :user_id)
   end
 end

@@ -1,4 +1,24 @@
+<h4><%= @workout.date.strftime("%A, %B %d") %></h4>
 
+
+<% if @workout.exercises.any? %>
+  <div id="index_workouts">
+    <table>
+      <tr>
+        <th>Exercise</th>
+        <th>Sets</th>
+        <th>Reps</th>
+      </tr>
+    <% @workout.exercises.each do |exercise| %>
+      <tr>
+        <td><%= exercise.name %></td>
+        <td><%= exercise.sets %></td>
+        <td><%= exercise.reps %></td>
+      </tr>
+      <% end %>
+      </table>
+  </div>
+<% else %>
 <div id="workout">
   <table>
     <tr>
@@ -16,9 +36,17 @@
     </tr>
   </table>
 </div>
+<% end %>
+
+<br><br>
+
+<span class="btn waves-effect waves-orange"><%= link_to "Add Exercise", new_workout_exercise_path(@workout) %></span>
 
 <br><br>
 
 <%= link_to "Back", root_path %> |
-<%= link_to "Edit", edit_workout_path(@workout) %> |
-<%= link_to "Delete", workout_path(@workout), method: :delete, data: { confrim: "Are you sure?" } %>
+<%= link_to "Edit Workout", edit_workout_path(@workout) %> |
+<%= link_to "Delete Workout", workout_path(@workout), method: :delete, data: { confrim: "Are you sure?" } %>
+
+
+<hr>

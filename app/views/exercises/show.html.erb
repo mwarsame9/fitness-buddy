@@ -1,7 +1,3 @@
-<h1>Show Exercise</h1>
-
-<p><%= link_to "Edit", edit_exercise_path(@exercise) %></p>
-<p><%= link_to "Delete", exercise_path(@exercise),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
-<p><%= link_to "Return to exercises", exercises_path %></p>
+<p><%= exercise.name %></p>
+<p><%= exercise.sets %></p>
+<p><%= exercise.reps %></p>
