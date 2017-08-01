@@ -18,7 +18,7 @@ $ rails s
 
 ## Live Website
 ```
-https://shielded-escarpment-80001.herokuapp.com/
+https://thawing-waters-29516.herokuapp.com
 ```
 
 ## Technologies Used
